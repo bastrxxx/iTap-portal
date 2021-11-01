@@ -690,29 +690,5 @@
 	})
 	
 </script>
-	<script>
-		$(document).ready(function() {
-		   updateScale();
-		 });
-		var $win = $(window);
-	 var $lay = $('#layout');
-	 var baseSize = {
-	   w: 1920
-	 }
-
-	 function updateScale() {
-	   var ww = $win.width();
-	   var newScale = 1;
-	   // compare ratios
-	   if (ww < baseSize.w) { // tall ratio
-		 newScale = ww / baseSize.w;
-	   }
-	   $lay.css('transform', 'scale(' + newScale + ')');
-	   //Make wrapper height scale 
-	   $('.wrapper').css('height', $lay.height() * newScale);
-	   console.log(newScale);
-	resizeObserver.observe(document.querySelector('.wrapper'))
-	 }
-	 $(window).resize(updateScale);
-	</script>
+	
 </html>
